@@ -1,0 +1,122 @@
+.product-detail{
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 100px;
+}
+
+.product-detail__breadcrumb{
+    margin-bottom: 15px;
+}
+
+.product-detail__basic{
+    display: flex;
+    justify-content: space-between;
+}
+.product-detail__image{
+    width: 50%;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+.product-detail__image-preview{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.product-detail__image-input{
+    display: block;
+}
+.product-detail__fields{
+    width: 50%;
+}
+.product-detail__input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+}
+.product-detail__checkbox-group{
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+.product-detail__checkbox{
+    padding: 0;
+    margin-right: 10px;
+    font-size: 18px;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+input[type="checkbox"]:checked{
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.product-detail__description{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.product-detail__textarea{
+    width: 100%;
+    height: 150px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+}
+
+.product-detail__btn{
+    text-align: center;
+}
+.product-detail__btn--update{
+    padding: 12px 24px;
+    background-color: #f5c800;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 200px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+.product-detail__btn--back{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e0dfde;
+    border-radius: 3px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 20px;
+    position: relative;
+    bottom: 48px;
+    left: 300px;
+}
+.delete__btn{
+    border: none;
+    background: transparent;
+    position: relative;
+    bottom: 85px;
+    left: 950px;
+    cursor: pointer;
+}
+svg{
+    width: 35px;
+    height: 35px;
+    color: #ff0000;
+}
+
+.product-detail__error{
+    color: #ff0000;
+}

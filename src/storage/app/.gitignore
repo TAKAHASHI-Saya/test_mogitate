@@ -1,4 +1,5 @@
 *
 !public/
-!public/**
+!public/fruits-img/
+!public/fruits-img/**
 !.gitignore

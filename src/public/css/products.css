@@ -1,0 +1,116 @@
+.product-content{
+    padding: 50px;
+}
+
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-header__btn{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffa929;
+    border-radius: 3px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+.product-content__inner{
+    display: flex;
+}
+
+.product-filter{
+    padding-right: 30px;
+    width: 20%;
+    border-bottom: 1px solid #D3D3D3;
+}
+.search-group__input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #D3D3D3;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.search-group__btn{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #f5c800;
+}
+.sort-group__tittle{
+    font-weight: bold;
+    font-size: 20px;
+}
+.sort-group__select{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #D3D3D3;
+    padding: 10px;
+    color: #A9A9A9;
+    margin-bottom: 20px;
+}
+
+.sort-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f5c800;
+    border-radius: 30px;
+    width: 130px;
+    height: 45px;
+    padding: 10px;
+}
+.sort-modal__label{
+    font-size: 12px;
+}
+.sort-modal__close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f5c800;
+    border-radius: 50%;
+    color: #f5c800;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%;
+    margin-bottom: 60px;
+}
+.product-card{
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+.product-card__image{
+    width: 100%;
+}
+.product-card__content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    align-items: center;
+}
+.product-card__name,
+.product-card__price{
+    font-size: 20px;
+    color: #000000;
+}
+
+.pagination{
+    text-align: center;
+    margin-left: 250px;
+}

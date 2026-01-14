@@ -1,0 +1,120 @@
+.product-register{
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 100px;
+}
+
+.product-register__heading{
+    margin-bottom: 80px;
+}
+
+.product-register__form--item{
+    margin-bottom: 50px;
+}
+.product-register__form--title{
+    margin-right: 20px;
+    font-size: 20px;
+}
+.product-register__form--required{
+    background-color: #ff0000;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.product-register__form--input{
+    display: block;
+    margin-top: 15px;
+    width: 80%;
+    height: 40px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+}
+
+.product-register__image--input{
+    display: block;
+    margin-top: 15px;
+}
+
+.product-register__form--option{
+    margin-left: 10px;
+    color: #ff0000;
+}
+.product-register__checkbox-group{
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.product-register__checkbox{
+    padding: 0;
+    margin-right: 20px;
+    font-size: 18px;
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+input[type="checkbox"]:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.product-register__form--textarea{
+    display: block;
+    width: 80%;
+    height: 150px;
+    border: 1px solid #D3D3D3;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.product-register__btn{
+    text-align: center;
+}
+.product-register__btn--submit{
+    padding: 12px 24px;
+    background-color: #f5c800;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 200px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+.product-register__btn--back{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e0dfde;
+    border-radius: 3px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 20px;
+    position: relative;
+    bottom: 48px;
+    left: 300px;
+}
+
+.product-register__form--error{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.product-register__form--error ul{
+    text-align: left;
+}
+.product-register__form--error li{
+    list-style: none;
+    color: #ff0000;
+    text-align: left;
+}

@@ -1,0 +1,13 @@
+.header{
+    height: 60px;
+}
+.header__heading{
+    margin: 10px 20px;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: #f5c800;
+}
+
+main{
+    background-color: #f8f8f8;
+}
