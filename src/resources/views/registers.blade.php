@@ -13,45 +13,35 @@
             <span class="product-register__form--title">商品名</span>
             <span class="product-register__form--required">必須</span>
             <input type="text" name="name" value="{{old('name')}}" placeholder="商品名を入力" class="product-register__form--input">
+            <p class="product-register__form--error">
+                @error('name')
+                {{$message}}
+                @enderror
+            </p>
         </div>
-        @if($errors->has('name'))
-        <div class="product-register__form--error">
-            <ul>
-                @foreach($errors->get('name') as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="product-register__form--item">
             <span class="product-register__form--title">値段</span>
             <span class="product-register__form--required">必須</span>
             <input type="text" name="price" value="{{old('price')}}" placeholder="値段を入力" class="product-register__form--input">
+            <p class="product-register__form--error">
+                @error('price')
+                {{$message}}
+                @enderror
+            </p>
         </div>
-        @if($errors->has('price'))
-        <div class="product-register__form--error">
-            <ul>
-                @foreach($errors->get('price') as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="product-register__form--item">
             <span class="product-register__form--title">商品画像</span>
             <span class="product-register__form--required">必須</span>
-            <img id="imagePreview" src="{{isset($product) ? asset('storage/' . $product->image) : ''}}" alt="商品画像" class="product-register__image--preview">
+            <div class="product-register__image--preview">
+                <img id="imagePreview" src="{{isset($product) && $product->image ? asset('storage/' . $product->image) : ''}}" alt="商品画像">
+            </div>
             <input type="file" name="image" accept="image/*" onchange="previewImage(this)" class="product-register__image--input">
+            <p class="product-register__form--error">
+                @error('image')
+                {{$message}}
+                @enderror
+            </p>
         </div>
-        @if($errors->has('image'))
-        <div class="product-register__form--error">
-            <ul>
-                @foreach($errors->get('image') as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="product-register__form--item">
             <span class="product-register__form--title">季節</span>
             <span class="product-register__form--required">必須</span>
@@ -63,30 +53,22 @@
                 </label>
                 @endforeach
             </fieldset>
+            <p class="product-register__form--error">
+                @error('seasons')
+                {{$message}}
+                @enderror
+            </p>
         </div>
-        @if($errors->has('seasons'))
-        <div class="product-register__form--error">
-            <ul>
-                @foreach($errors->get('seasons') as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="product-register__form--item">
             <span class="product-register__form--title">商品説明</span>
             <span class="product-register__form--required">必須</span>
             <textarea name="description" class="product-register__form--textarea">{{old('description')}}</textarea>
+            <p class="product-register__form--error">
+                @error('description')
+                {{$message}}
+                @enderror
+            </p>
         </div>
-        @if($errors->has('description'))
-        <div class="product-register__form--error">
-            <ul>
-                @foreach($errors->get('description') as $error)
-                <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         <div class="product-register__btn">
             <button type="submit" class="product-register__btn--submit">登録</button>
         </div>

@@ -1,7 +1,7 @@
 .product-register{
     margin: 0 auto;
+    padding: 50px 30px;
     max-width: 1230px;
-    padding: 100px;
 }
 
 .product-register__heading{
@@ -86,7 +86,6 @@ input[type="checkbox"]:checked {
     border-radius: 3px;
     font-size: 16px;
     width: 200px;
-    margin-left: 200px;
     cursor: pointer;
 }
 .product-register__btn--back{
@@ -99,22 +98,12 @@ input[type="checkbox"]:checked {
     text-align: center;
     font-size: 16px;
     width: 200px;
-    margin-right: 20px;
     position: relative;
     bottom: 48px;
-    left: 300px;
+    left: 270px;
 }
 
 .product-register__form--error{
-    margin-top: 0px;
-    margin-bottom: 20px;
-    text-align: left;
-}
-.product-register__form--error ul{
-    text-align: left;
-}
-.product-register__form--error li{
-    list-style: none;
     color: #ff0000;
-    text-align: left;
+    margin-bottom: 20px;
 }

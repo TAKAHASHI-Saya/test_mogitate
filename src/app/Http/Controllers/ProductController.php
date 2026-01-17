@@ -80,7 +80,7 @@ class ProductController extends Controller
 
         if($request->hasFile('image'))
             {
-                $path = $request->file('image')->store('uploading', 'public');
+                $path = $request->file('image')->store('fruits-img', 'public');
                 $data['image'] = $path;
             }
 

@@ -16,29 +16,33 @@
         @method('PATCH')
         <div class="product-detail__basic">
             <div class="product-detail__image">
-                <img src="{{asset('storage/' . $product['image'])}}" alt="商品画像" class="product-detail__image-preview">
-                <input type="file" name="image" class="product-detail__image-input">
-                @if($errors->has('image'))
-                    @foreach($errors->get('image') as $message)
-                        <p class="product-detail__error">{{$message}}</p>
-                    @endforeach
+                @if(isset($product) && $product['image'])
+                <img src="{{asset('storage/' . $product['image'])}}" alt="商品画像" class="product-detail__image-preview" id="imagePreview">
+                @else
+                <img id="imagePreview" alt="商品画像" class="product-detail__image-preview" style="display:none;">
                 @endif
+                <input type="file" name="image" accept="image/*" onchange="previewImage(this)" class="product-detail__image-input">
+                <p class="product-detail__error">
+                    @error('image')
+                    {{$message}}
+                    @enderror
+                </p>
             </div>
             <div class="product-detail__fields">
                 <p class="product-detail__label">商品名</p>
                 <input type="text" name="name" value="{{old('name', $product->name)}}" placeholder="商品名を入力" class="product-detail__input">
-                @if($errors->has('name'))
-                    @foreach($errors->get('name') as $message)
-                        <p class="product-detail__error">{{$message}}</p>
-                    @endforeach
-                @endif
+                <p class="product-detail__error">
+                    @error('name')
+                    {{$message}}
+                    @enderror
+                </p>
                 <p class="product-detail__label">値段</p>
                 <input type="text" name="price" value="{{old('price', $product->price)}}" placeholder="値段を入力" class="product-detail__input">
-                @if($errors->has('price'))
-                    @foreach($errors->get('price') as $message)
-                        <p class="product-detail__error">{{$message}}</p>
-                    @endforeach
-                @endif
+                <p class="product-detail__error">
+                    @error('price')
+                    {{$message}}
+                    @enderror
+                </p>
                 <p class="product-detail__label">季節</p>
                 <fieldset class="product-detail__checkbox-group">
                     @foreach($seasons as $season)
@@ -48,21 +52,21 @@
                     </label>
                     @endforeach
                 </fieldset>
-                @if($errors->has('seasons'))
-                    @foreach($errors->get('seasons') as $message)
-                        <p class="product-detail__error">{{$message}}</p>
-                    @endforeach
-                @endif
+                <p class="product-detail__error">
+                    @error('seasons')
+                    {{$message}}
+                    @enderror
+                </p>
             </div>
         </div>
         <div class="product-detail__description">
             <p class="product-detail__label">商品説明</p>
             <textarea name="description" class="product-detail__textarea">{{old('description', $product->description)}}</textarea>
-            @if($errors->has('description'))
-                @foreach($errors->get('description') as $message)
-                    <p class="product-detail__error">{{$message}}</p>
-                @endforeach
-            @endif
+            <p class="product-detail__error">
+                @error('description')
+                {{$message}}
+                @enderror
+            </p>
         </div>
         <div class="product-detail__btn">
             <button type="submit" class="product-detail__btn--update">変更を保存</button>
@@ -84,3 +88,19 @@
     </form>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    function previewImage(input)
+    {
+        if(input.files && input.files[0])
+        {
+            const reader = new FileReader();
+            reader.onload = e => {
+                document.getElementById('imagePreview').src = e.target.result;
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+@endpush
