@@ -47,3 +47,7 @@ php artisan storage:link
 
 ## ER図
 ![ER図](./src/docs/er.drawio.png)
+
+## URL
+- 商品一覧画面: http://localhost/products
+- phpMyAdmin: http://localhost:8080/
